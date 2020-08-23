@@ -1,5 +1,14 @@
+array = ["apple"]
 def oxford_comma(array)
-fruits = ["kiwi", "durian", "starfruit", "mangos", "dragon fruits", "lychees", "pomelos"]
-fruits.join(",")
-fruits << "and"
-end 
+  if array.length == 2
+  array[-2] << " and "
+  array.join
+  elsif array.length == 1
+  	array.join
+  elsif array.length > 2
+    array[-1].prepend "and "
+	array.join(", ")
+  end
+end
+
+oxford_comma(array)
